@@ -21,8 +21,6 @@ class Mathematics
         $this->radius = $radius;
         $circumference = 2 * $radius * self::$pi;
         return $circumference;    
-    }
-
-    
+    } 
 }
 ?>
