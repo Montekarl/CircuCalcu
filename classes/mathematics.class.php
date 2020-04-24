@@ -12,7 +12,7 @@ class Mathematics
     public function calcArea($radius)
     {
         $this->radius = $radius;
-        $surfaceArea = pow($radius * self::$pi, 2);
+        $surfaceArea = $radius * pow(self::$pi, 2);
         return $surfaceArea;
     }
 
