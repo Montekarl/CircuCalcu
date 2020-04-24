@@ -1,5 +1,6 @@
-<?php 
-   include 'includes/autoloader.inc.php'
+<?php
+    declare(strict_types=1);
+    include 'includes/autoloader.inc.php'
 ?>
 
 <html>

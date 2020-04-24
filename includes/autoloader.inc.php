@@ -12,6 +12,5 @@
     {
         return false;
     }
-
      include_once $fullPath;
  }
