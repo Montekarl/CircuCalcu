@@ -1,4 +1,7 @@
 <?php 
+
+namespace Figurines; 
+
 class Mathematics
 {
     public static $pi=3.14159265359;
