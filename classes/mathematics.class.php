@@ -4,10 +4,15 @@ class Mathematics
     public static $pi=3.14159265359;
     public $radius;
 
-    public function getRadius($radius)
+    public function __construct(int $radius)
     {
         $this->radius = $radius;
     }
+
+    // public function getRadius($radius)
+    // {
+    //     $this->radius = $radius;
+    // }
 
     public function calcArea($radius)
     {
@@ -22,5 +27,10 @@ class Mathematics
         $circumference = 2 * $radius * self::$pi;
         return $circumference;    
     } 
+
+    public function __destruct()
+    {
+         
+    }
 }
 ?>

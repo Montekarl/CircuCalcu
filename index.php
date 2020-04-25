@@ -19,8 +19,7 @@
             if(isset($_POST['SubmitButton']))
             {
                 $input = $_POST['radius'];
-                $newCircle = new Mathematics();
-                $newCircle->getRadius($input);
+                $newCircle = new Mathematics($input);
                 echo "If Radius is: " . $newCircle->radius. "<br>";
                 echo "The Area of Such Circle is " . $newCircle->calcArea($input) . "<br>";
                 echo "and the Circumference is " . $newCircle->calcCircumference($input);
