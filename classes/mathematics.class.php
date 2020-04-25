@@ -1,32 +1,53 @@
 <?php 
+
+declare (strict_types=1);
 class Mathematics
 {
     public static $pi=3.14159265359;
-    public $radius;
+    public $shape;
+    public $input;
 
-    public function __construct(int $radius)
+    public function defineShape(string $shape)
     {
-        $this->radius = $radius;
+        $this->shape = $shape;
+        return $shape; 
     }
 
-    // public function getRadius($radius)
-    // {
-    //     $this->radius = $radius;
-    // }
-
-    public function calcArea($radius)
+    public function defineValue(int $value)
     {
-        $this->radius = $radius;
-        $surfaceArea = $radius * pow(self::$pi, 2);
-        return $surfaceArea;
+        $this->input = $value;
+        return $value;
     }
 
-    public function calcCircumference($radius)
+    public function calcuCalcu(string $shape, int $input)
     {
-        $this->radius = $radius;
-        $circumference = 2 * $radius * self::$pi;
-        return $circumference;    
-    } 
+        $this->input = $input;
+        $this->shape = $shape;
+        
+        switch($shape)
+        {
+            case 'circle' :
+                $surfaceArea = $input * pow(self::$pi, 2);
+                $perimeter = 2 * $input * self::$pi;
+                return "You have chosen a ". $this->defineShape($shape) . 
+                "<br/> if the radius of such circle is " . $this->defineValue($input) . 
+                "<br> then the surface area of it is "
+                . $surfaceArea . " square units <br/> and the circumference is " . $perimeter . " units";
+                break;
+            case 'square' :
+                $this->input = $input;
+                $surfaceArea = pow($this->input,2);
+                $perimeter = 4 * $this->input;
+                return "You have chosen a ". $this->defineShape($shape). 
+                "<br/> if the side of such square is " . $this->defineValue($input) . 
+                "<br/> then the surface area of it is " 
+                . $surfaceArea . " square units <br/> and the perimeter is " . $perimeter . " units";
+                break;
+            default:
+                echo "Error!";
+            break;      
+        }
+    }
 
     public function __destruct()
     {

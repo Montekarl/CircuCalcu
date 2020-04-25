@@ -4,25 +4,30 @@
 
 <html>
     <head>
-    <title>CircuCalcu</title>
+    <title>ShapeCalcu</title>
     </head>
     <body>
-        <h5>
-            Please insert Radius
-        </h5>
+        Choose shape: <br/>
         <form action = "" method="post">
-            <input type = "text" name="radius";>
+            
+            <select name = "shape">
+                <option></option>
+                <option>circle</option>
+                <option>square</option>
+            </select> <br/>
+            
+            Insert Radius / Side:<br/>
+            <input type = "text" name="value";>
             <input type = "submit" name="SubmitButton">
         </form>
         
         <?php 
             if(isset($_POST['SubmitButton']))
             {
-                $input = $_POST['radius'];
-                $newCircle = new Mathematics($input);
-                echo "If Radius is: " . $newCircle->radius. "<br>";
-                echo "The Area of Such Circle is " . $newCircle->calcArea($input) . "<br>";
-                echo "and the Circumference is " . $newCircle->calcCircumference($input);
+                $shape = $_POST['shape'];
+                $input = $_POST['value'];
+                $newShape = new Mathematics();
+                echo $newShape->calcuCalcu($shape, (int)$input); 
             }
         ?>
     </body>
