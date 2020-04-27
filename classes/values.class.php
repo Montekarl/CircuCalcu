@@ -19,9 +19,4 @@ class Values
         $this->input = $value;
         return $value;
     }
-    
-    public function __destruct()
-    {
-         
-    }
 }
