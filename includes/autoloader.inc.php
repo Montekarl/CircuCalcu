@@ -1,6 +1,6 @@
 <?php
 
- spl_autoload_register('myAutoLoader');
+spl_autoload_register('myAutoLoader');
 
  function myAutoLoader($className)
  {
@@ -13,5 +13,5 @@
         return false;
     }
 
-     include_once $fullPath;
+    include_once $fullPath;
  }
