@@ -34,5 +34,3 @@ class Mathematics extends Values
         }
     }
 }
-
-
