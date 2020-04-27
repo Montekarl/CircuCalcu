@@ -3,7 +3,7 @@
 declare (strict_types=1);
 class Mathematics
 {
-    public static $pi=3.14159265359;
+    const PI=3.14159265359;
     public $shape;
     public $input;
 
@@ -27,8 +27,8 @@ class Mathematics
         switch($shape)
         {
             case 'circle' :
-                $surfaceArea = $input * pow(self::$pi, 2);
-                $perimeter = 2 * $input * self::$pi;
+                $surfaceArea = $input * pow(self::PI, 2);
+                $perimeter = 2 * $input * self::PI;
                 return "You have chosen a ". $this->defineShape($shape) . 
                 "<br/> if the radius of such circle is " . $this->defineValue($input) . 
                 "<br> then the surface area of it is "

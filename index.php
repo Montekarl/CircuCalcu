@@ -26,8 +26,15 @@
             {
                 $shape = $_POST['shape'];
                 $input = $_POST['value'];
-                $newShape = new Mathematics();
-                echo $newShape->calcuCalcu($shape, (int)$input); 
+                try 
+                {
+                    $newShape = new Mathematics();
+                    echo $newShape->calcuCalcu($shape, $input); 
+                }catch(TypeError $e)
+                {
+                    echo 'Caught exception: ',  $e->getMessage(), "\n";
+                }
+                
             }
         ?>
     </body>
