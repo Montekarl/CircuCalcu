@@ -30,6 +30,12 @@ class Square extends Values implements shapeInterface
 
 class Circle extends Values implements shapeInterface
 {
+    public function isShape(string $shape)
+    {
+        $shape = parent::$shape;
+        return $shape;
+    }
+    
     public function circumference(int $radius)
     {
         $this->input = $radius;
@@ -48,45 +54,7 @@ class Circle extends Values implements shapeInterface
     {
         $this->circumference;
         $this->surfaceArea;
-    }
-}
-
-class Triangle extends Values implements shapeInterface
-{
-    public function perimeter()
-    {
-        
-    }
-
-    public function formulas()
-    {
-        $this->perimeter;
-    }
-}
-
-class Rectangle extends Values implements shapeInterface
-{
-    public function perimeter()
-    {
-        
-    }
-
-    public function formulas()
-    {
-        $this->perimeter;
-    }
-}
-
-class Rhomb extends Values implements shapeInterface
-{
-    public function perimeter()
-    {
-        
-    }
-
-    public function formulas()
-    {
-        $this->perimeter;
+        $this->isShape;
     }
 }
 
@@ -99,6 +67,5 @@ class Calculations
 }
 
 $shapeType = new Square();
-
 $Square01 = new Calculations();
 $Square01->calculation($shapeType);

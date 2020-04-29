@@ -26,11 +26,13 @@
             {
                 $shape = $_POST['shape'];
                 $input = $_POST['value'];
+                
                 try 
                 {
                     $newShape = new Mathematics();
                     echo $newShape->calcuCalcu($shape, $input); 
-                }catch(TypeError $e)
+                }
+                catch(TypeError $e)
                 {
                     echo 'Caught exception: ',  $e->getMessage(), "\n";
                 }
